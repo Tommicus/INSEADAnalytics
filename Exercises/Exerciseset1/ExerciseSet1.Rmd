@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 ---
 output: html_document
 runtime: shiny
 ---
+=======
+>>>>>>> d0596761b3295a1d9b636f124f1054d02451e6c2
 runtime: shiny
 ---
 title: "Exercise Set 1"
