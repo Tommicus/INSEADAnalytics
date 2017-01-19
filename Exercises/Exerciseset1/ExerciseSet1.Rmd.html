@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://127.0.0.1:6380/ExerciseSet1.Rmd -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="application/shiny-singletons"></script>  <script type="application/html-dependencies">json2[2014.02.04];jquery[1.12.4];babel-polyfill[6.7.2];shiny[1.0.0]</script><script src="./ExerciseSet1.Rmd_files/json2-min.js"></script>
+<script src="./ExerciseSet1.Rmd_files/jquery.min.js"></script>
+<script src="./ExerciseSet1.Rmd_files/babel-polyfill.min.js"></script>
+<link href="./ExerciseSet1.Rmd_files/shiny.css" rel="stylesheet">
+<script src="./ExerciseSet1.Rmd_files/shiny.min.js"></script>  <script src="./ExerciseSet1.Rmd_files/rmd_loader.js"></script>
+  <link href="./ExerciseSet1.Rmd_files/rmd_loader.css" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="./ExerciseSet1.Rmd_files/bootstrap.min.css"><script src="./ExerciseSet1.Rmd_files/bootstrap.min.js"></script><script src="./ExerciseSet1.Rmd_files/html5shiv.min.js"></script><script src="./ExerciseSet1.Rmd_files/respond.min.js"></script><script src="./ExerciseSet1.Rmd_files/tabsets.js"></script><link rel="stylesheet" type="text/css" href="./ExerciseSet1.Rmd_files/default.css"><script src="./ExerciseSet1.Rmd_files/highlight.js"></script><link rel="stylesheet" type="text/css" href="./ExerciseSet1.Rmd_files/ion.rangeSlider.css"><link rel="stylesheet" type="text/css" href="./ExerciseSet1.Rmd_files/ion.rangeSlider.skinShiny.css"><script src="./ExerciseSet1.Rmd_files/ion.rangeSlider.min.js"></script><script src="./ExerciseSet1.Rmd_files/strftime-min.js"></script><link rel="stylesheet" type="text/css" href="./ExerciseSet1.Rmd_files/rmd_perf.css"><script src="./ExerciseSet1.Rmd_files/rmd_perf.js"></script><meta name="rstudio_origin" content="127.0.0.1:17899"><script src="./ExerciseSet1.Rmd_files/rsiframe.js"></script>
+
+
+
+<meta name="generator" content="pandoc">
+
+
+
+
+<title></title>
+
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+<script type="text/javascript" src="./ExerciseSet1.Rmd_files/MathJax.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <div>
+    <div data-display-if="!output.__reactivedoc__" style="display: none;">
+      <div id="rmd_loader_wrapper">
+        <div id="rmd_loader">
+          <img src="./ExerciseSet1.Rmd_files/rmd_loader.gif">
+          <p>Loading</p>
+        </div>
+      </div>
+    </div>
+    <div id="__reactivedoc__" class="shiny-html-output shiny-bound-output">
+
+
+
+
+
+
+
+<style type="text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("section-TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="fluid-row" id="section-header">
+
+
+
+
+</div>
+
+
+<div id="section-runtime-shiny" class="section level2">
+<h2>runtime: shiny</h2>
+<p>title: “Exercise Set 1” author: “T. Evgeniou” output: html_document: default pdf_document: default —</p>
+<p><br></p>
+<p>The purpose of this exercise is to become familiar with:</p>
+<ol style="list-style-type: decimal">
+<li>Basic statistics functions in R;</li>
+<li>Simple matrix operations;</li>
+<li>Simple data manipulations;</li>
+<li>The idea of functions as well as some useful customized functions provided.</li>
+</ol>
+<p>While doing this exercise we will also see how to generate replicable and customizable reports. For this purpose the exercise uses the R Markdown capabilities (see <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">Markdown Cheat Sheet</a> or a <a href="http://rmarkdown.rstudio.com/authoring_basics.html">basic introduction to R Markdown</a>). These capabilities allow us to create dynamic reports. For example today’s date is 2017-01-19 (you need to see the .Rmd to understand that this is <em>not</em> a static typed-in date but it changes every time you compile the .Rmd - if the date changed of course).</p>
+<p>Before starting, make sure you have pulled the <a href="https://github.com/InseadDataAnalytics/INSEADAnalytics/tree/master/Exercises/Exerciseset1">exercise files</a> on your github repository (if you pull the course github repository you also get the exercise set files automatically). Moreover, make sure you are in the directory of this exercise. Directory paths may be complicated, and sometimes a frustrating source of problems, so it is recommended that you use these R commands to find out your current working directory and, if needed, set it where you have the main files for the specific exercise/project (there are other ways, but for now just be aware of this path issue). For example, assuming we are now in the “MYDIRECTORY/INSEADAnalytics” directory, we can do these:</p>
+<pre class="r"><code class="r"><span class="identifier">getwd</span><span class="paren">(</span><span class="paren">)</span>
+<span class="identifier">setwd</span><span class="paren">(</span><span class="string">"Exercises/Exerciseset1/"</span><span class="paren">)</span>
+<span class="identifier">list.files</span><span class="paren">(</span><span class="paren">)</span></code></pre>
+<p><strong>Note:</strong> you can always use the <code>help</code> command in Rstudio to find out about any R function (e.g.&nbsp;type <code>help(list.files)</code> to learn what the R function <code>list.files</code> does).</p>
+<p>Let’s now see the exercise.</p>
+<p><strong>IMPORTANT:</strong> You should answer all questions by simply adding your code/answers in this document through editing the file ExerciseSet1.Rmd and then clicking on the “Knit HTML” button in RStudio. Once done, please post your .Rmd and html files in your github repository.</p>
+<hr>
+<hr>
+<div id="section-exercise-data" class="section level3">
+<h3>Exercise Data</h3>
+<p>We download daily prices (open, high, low, close, and adjusted close) and volume data of publicly traded companies and markets from the web (e.g.&nbsp;Yahoo! or Google, etc). This is done by sourcing the file data.R as well as some helper functions in herpersSet1.R which also installs a number of R libraries (hence the first time you run this code you will see a lot of red color text indicating the <em>download</em> and <em>installation</em> process):</p>
+<pre class="r"><code class="r"><span class="keyword">source</span><span class="paren">(</span><span class="string">"helpersSet1.R"</span><span class="paren">)</span>
+<span class="keyword">source</span><span class="paren">(</span><span class="string">"dataSet1.R"</span><span class="paren">)</span></code></pre>
+<p>[1] “ticker SPY …” [1] “ticker AAPL …” [1] “ticker YHOO …”</p>
+<p>For more information on downloading finance data from the internet as well as on finance related R tools see these starting points (there is a lot more of course available):</p>
+<ul>
+<li><a href="http://www.r-bloggers.com/r-code-yahoo-finance-data-loading/">Some finance data loading tools</a></li>
+<li><a href="http://www.r-bloggers.com/rblpapi-connecting-r-to-bloomberg/">Connecting directly to Bloomberg</a></li>
+<li><a href="http://www.r-bloggers.com/plotting-time-series-in-r-using-yahoo-finance-data/">Some time series plot tools</a></li>
+<li><a href="https://cran.r-project.org/web/views/Finance.html">Various finance code links</a></li>
+<li><a href="http://blog.revolutionanalytics.com/2013/12/quantitative-finance-applications-in-r.html">More links</a></li>
+<li><a href="http://www.r-bloggers.com/financial-data-accessible-from-r-part-iv/">Even more links</a></li>
+<li>Of course endless available code (e.g.&nbsp;like this one that seems to <a href="https://github.com/gsee/qmao/blob/master/R/getCalendar.R">get companies’ earnings calendars</a>)</li>
+</ul>
+<div id="section-optional-question" class="section level4">
+<h4>Optional Question</h4>
+<ol style="list-style-type: decimal">
+<li>Can you find some interesting finance related R package or github repository? <strong>Your Answers here:</strong></li>
+</ol>
+<p><em>Options Princing in R</em> <a href="https://github.com/rmcd1024/derivmkts" class="uri">https://github.com/rmcd1024/derivmkts</a></p>
+<p><em>Query data from the U.S. Securities and Exchange Commission</em> <a href="https://github.com/sewardlee337/finreportr" class="uri">https://github.com/sewardlee337/finreportr</a></p>
+</div>
+</div>
+<div id="section-part-i-statistics-of-sp-daily-returns" class="section level3">
+<h3>Part I: Statistics of S&amp;P Daily Returns</h3>
+<p>We have 3786 days of data, starting from 2002-01-03 until 2017-01-17. Here are some basic statistics about the S&amp;P returns:</p>
+<ol style="list-style-type: decimal">
+<li>The cumulative returns of the S&amp;P index during this period is 124.9%.</li>
+<li>The average daily returns of the S&amp;P index during this period is 0.033%;</li>
+<li>The standard deviation of the daily returns of the S&amp;P index during this period is 1.221%;</li>
+</ol>
+<p>Here are returns of the S&amp;P in this period (note the use of the helper function pnl_plot - defined in file helpersSet1.R):</p>
+<p><img src="./ExerciseSet1.Rmd_files/unnamed-chunk-3-1.png" width="576" style="display: block; margin: auto;"></p>
+<div id="section-questions" class="section level4">
+<h4>Questions</h4>
+<ol style="list-style-type: decimal">
+<li>Notice that the code also downloads the returns of Apple during the same period. Can you explain where this is done in the code (including the .R files used)?</li>
+</ol>
+<p><em>mytickers = c(“SPY”, “AAPL”)</em></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>What are the cumulative, average daily returns, and the standard deviation of the daily returns of Apple in the same period?</p></li>
+<li>The cumulative returns of Apple during this period is 533.1%.</li>
+<li>The average daily returns of Apple during this period is 0.141%;</li>
+<li><p>The standard deviation of the daily returns of Apple during this period is 2.249%;</p></li>
+<li><p><em>(Extra points)</em> What if we want to also see the returns of another company, say Yahoo!, in the same period? Can you get that data and report the statistics for Yahoo!’s stock, too?</p></li>
+</ol>
+<p><em>Change to:</em> <em>mytickers = c(“SPY”, “AAPL”, “YHOO”) and reload the data file</em></p>
+<p><br> <br> <br> <br></p>
+<hr>
+<hr>
+</div>
+</div>
+<div id="section-part-ii-simple-matrix-manipulations" class="section level3">
+<h3>Part II: Simple Matrix Manipulations</h3>
+<p>For this part of the exercise we will do some basic manipulations of the data. First note that the data are in a so-called matrix format. If you run these commands in RStudio (use help to find out what they do) you will see how matrices work:</p>
+<pre class="r"><code class="r"><span class="identifier">class</span><span class="paren">(</span><span class="identifier">StockReturns</span><span class="paren">)</span>
+<span class="identifier">dim</span><span class="paren">(</span><span class="identifier">StockReturns</span><span class="paren">)</span>
+<span class="identifier">nrow</span><span class="paren">(</span><span class="identifier">StockReturns</span><span class="paren">)</span>
+<span class="identifier">ncol</span><span class="paren">(</span><span class="identifier">StockReturns</span><span class="paren">)</span>
+<span class="identifier">StockReturns</span><span class="paren">[</span><span class="number">1</span><span class="operator">:</span><span class="number">4</span>,<span class="paren">]</span>
+<span class="identifier">head</span><span class="paren">(</span><span class="identifier">StockReturns</span>,<span class="number">5</span><span class="paren">)</span>
+<span class="identifier">tail</span><span class="paren">(</span><span class="identifier">StockReturns</span>,<span class="number">5</span><span class="paren">)</span> </code></pre>
+<p>We will now use an R function for matrices that is extremely useful for analyzing data. It is called <em>apply</em>. Check it out using help in R.</p>
+<p>For example, we can now quickly estimate the average returns of S&amp;P and Apple (of course this can be done manually, too, but what if we had 500 stocks - e.g.&nbsp;a matrix with 500 columns?) and plot the returns of that 50-50 on S&amp;P and Apple portfolio:</p>
+<p><img src="./ExerciseSet1.Rmd_files/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;"></p>
+<p>We can also transpose the matrix of returns to create a new “horizontal” matrix. Let’s call this matrix (variable name) transposedData. We can do so using this command: <code>transposedData = t(StockReturns)</code>.</p>
+<div id="section-questions-1" class="section level4">
+<h4>Questions</h4>
+<ol style="list-style-type: decimal">
+<li>What R commands can you use to get the number of rows and number of columns of the new matrix called transposedData?</li>
+</ol>
+<p>transposedData = t(StockReturns) nrow(transposedData) ncol(transposedData)</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Based on the help for the R function <em>apply</em> (<code>help(apply)</code>), can you create again the portfolio of S&amp;P and Apple and plot the returns in a new figure below?</li>
+</ol>
+<p><img src="./ExerciseSet1.Rmd_files/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;"></p>
+<p><strong>Your Answers here:</strong> <br> <br> <br> <br></p>
+<hr>
+<hr>
+</div>
+</div>
+<div id="section-part-iii-reproducibility-and-customization" class="section level3">
+<h3>Part III: Reproducibility and Customization</h3>
+<p>This is an important step and will get you to think about the overall process once again.</p>
+<div id="section-questions-2" class="section level4">
+<h4>Questions</h4>
+<ol style="list-style-type: decimal">
+<li>We want to re-do all this analysis with data since 2002-01-01: what change do we need to make in the code (hint: all you need to change is one line - exactly 1 number! - in data.R file), and how can you get the new exercise set with the data since 2002-01-01?</li>
+</ol>
+<p><em>change startDate = “2002-01-01”</em> and run the file again</p>
+<ol start="2" style="list-style-type: decimal">
+<li><em>(Extra Exercise)</em> Can you get the returns of a few companies and plot the returns of an equal weighted portfolio with those companies during some period you select?</li>
+</ol>
+<p><img src="./ExerciseSet1.Rmd_files/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;"></p>
+<p><strong>Your Answers here:</strong> <br> <br> <br> <br></p>
+<hr>
+<hr>
+</div>
+</div>
+<div id="section-part-iv-readwrite-.csv-files" class="section level3">
+<h3>Part IV: Read/Write .CSV files</h3>
+<p>Finally, one can read and write data in .CSV files. For example, we can save the first 20 days of data for S&amp;P and Apple in a file using the command:</p>
+<pre class="r"><code class="r"><span class="identifier">write.csv</span><span class="paren">(</span><span class="identifier">StockReturns</span><span class="paren">[</span><span class="number">1</span><span class="operator">:</span><span class="number">20</span>,<span class="identifier">c</span><span class="paren">(</span><span class="string">"SPY"</span>,<span class="string">"AAPL"</span><span class="paren">)</span><span class="paren">]</span>, <span class="identifier">file</span> <span class="operator">=</span> <span class="string">"twentydays.csv"</span>, <span class="identifier">row.names</span> <span class="operator">=</span> <span class="literal">TRUE</span>, <span class="identifier">col.names</span> <span class="operator">=</span> <span class="literal">TRUE</span><span class="paren">)</span> </code></pre>
+<p>Do not get surpsised if you see the csv file in your directories suddenly! You can then read the data from the csv file using the read.csv command. For example, this will load the data from the csv file and save it in a new variable that now is called “myData”:</p>
+<pre class="r"><code class="r"><span class="identifier">myData</span> <span class="operator">&lt;-</span> <span class="identifier">read.csv</span><span class="paren">(</span><span class="identifier">file</span> <span class="operator">=</span> <span class="string">"twentydays.csv"</span>, <span class="identifier">header</span> <span class="operator">=</span> <span class="literal">TRUE</span>, <span class="identifier">sep</span><span class="operator">=</span><span class="string">";"</span><span class="paren">)</span></code></pre>
+<p>Try it!</p>
+<div id="section-questions-3" class="section level4">
+<h4>Questions</h4>
+<ol style="list-style-type: decimal">
+<li>Once you write and read the data as described above, what happens when you run this command in the console of the RStudio: <code>sum(myData != StockReturns[1:20,])</code></li>
+</ol>
+<p><em>Returns the number 20 or 60 if we change from “;” to “,”</em></p>
+<ol start="2" style="list-style-type: decimal">
+<li><em>(Extra exercise)</em> What do you think will happen if you now run this command, and why:</li>
+</ol>
+<pre class="r"><code class="r"><span class="identifier">myData</span> <span class="operator">+</span> <span class="identifier">StockReturns</span><span class="paren">[</span><span class="number">1</span><span class="operator">:</span><span class="number">40</span>,<span class="paren">]</span><span class="paren">)</span></code></pre>
+<p><em>Error, because we add a non-numeric argument to binary operator</em></p>
+<p><strong>Your Answers here:</strong> <br> <br> <br> <br></p>
+<hr>
+<hr>
+</div>
+</div>
+<div id="section-extra-question" class="section level3">
+<h3>Extra Question</h3>
+<p>Can you now load another dataset from some CSV file and report some basic statistics about that data?</p>
+<p><br></p>
+</div>
+<div id="section-creating-interactive-documents" class="section level3">
+<h3>Creating Interactive Documents</h3>
+<p>Finally, just for fun, one can add some interactivity in the report using <a href="http://rmarkdown.rstudio.com/authoring_shiny.html">Shiny</a>.All one needs to do is set the eval flag of the code chunk below (see the .Rmd file) to “TRUE”, add the line “runtime: shiny” at the very begining of the .Rmd file, make the markdown output to be “html_document”, and then press “Run Document”.</p>
+<pre class="r"><code class="r"><span class="identifier">sliderInput</span><span class="paren">(</span><span class="string">"startdate"</span>, <span class="string">"Starting Date:"</span>, <span class="identifier">min</span> <span class="operator">=</span> <span class="number">1</span>, <span class="identifier">max</span> <span class="operator">=</span> <span class="identifier">length</span><span class="paren">(</span><span class="identifier">portfolio</span><span class="paren">)</span>, 
+            <span class="identifier">value</span> <span class="operator">=</span> <span class="number">1</span><span class="paren">)</span></code></pre>
+<div class="form-group shiny-input-container">
+<label class="control-label" for="startdate">Starting Date:</label>
+<span class="irs js-irs-0 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="-1"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span class="irs-min" style="visibility: hidden;">1</span><span class="irs-max" style="visibility: visible;">3,786</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single" style="left: 1.66667%;">1</span></span><span class="irs-grid" style="width: 92.6667%; left: 3.56667%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -1.83333%;">1</span><span class="irs-grid-pol small" style="left: 7.045354469%"></span><span class="irs-grid-pol small" style="left: 3.522677235%"></span><span class="irs-grid-pol" style="left: 10.568031704%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10.568%; visibility: visible; margin-left: -3.5%;">401</span><span class="irs-grid-pol small" style="left: 17.613386173%"></span><span class="irs-grid-pol small" style="left: 14.090708939%"></span><span class="irs-grid-pol" style="left: 21.136063408%"></span><span class="irs-grid-text js-grid-text-2" style="left: 21.1361%; visibility: visible; margin-left: -3.5%;">801</span><span class="irs-grid-pol small" style="left: 28.181417877%"></span><span class="irs-grid-pol small" style="left: 24.658740643%"></span><span class="irs-grid-pol" style="left: 31.704095112%"></span><span class="irs-grid-text js-grid-text-3" style="left: 31.7041%; visibility: visible; margin-left: -4.66667%;">1,201</span><span class="irs-grid-pol small" style="left: 38.749449581%"></span><span class="irs-grid-pol small" style="left: 35.226772347%"></span><span class="irs-grid-pol" style="left: 42.272126816%"></span><span class="irs-grid-text js-grid-text-4" style="left: 42.2721%; margin-left: -4.66667%;">1,601</span><span class="irs-grid-pol small" style="left: 49.317481285%"></span><span class="irs-grid-pol small" style="left: 45.794804051%"></span><span class="irs-grid-pol" style="left: 52.84015852%"></span><span class="irs-grid-text js-grid-text-5" style="left: 52.8402%; visibility: visible; margin-left: -4.83333%;">2,001</span><span class="irs-grid-pol small" style="left: 59.885512989%"></span><span class="irs-grid-pol small" style="left: 56.362835755%"></span><span class="irs-grid-pol" style="left: 63.408190224%"></span><span class="irs-grid-text js-grid-text-6" style="left: 63.4082%; visibility: visible; margin-left: -4.66667%;">2,401</span><span class="irs-grid-pol small" style="left: 70.453544693%"></span><span class="irs-grid-pol small" style="left: 66.930867459%"></span><span class="irs-grid-pol" style="left: 73.976221928%"></span><span class="irs-grid-text js-grid-text-7" style="left: 73.9762%; visibility: visible; margin-left: -4.83333%;">2,801</span><span class="irs-grid-pol small" style="left: 81.021576397%"></span><span class="irs-grid-pol small" style="left: 77.498899163%"></span><span class="irs-grid-pol" style="left: 84.544253632%"></span><span class="irs-grid-text js-grid-text-8" style="left: 84.5443%; margin-left: -4.83333%;">3,201</span><span class="irs-grid-pol small" style="left: 91.589608101%"></span><span class="irs-grid-pol small" style="left: 88.066930867%"></span><span class="irs-grid-pol" style="left: 95.112285336%"></span><span class="irs-grid-text js-grid-text-9" style="left: 95.1123%; visibility: visible; margin-left: -4.66667%;">3,601</span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -4.83333%;">3,786</span></span><span class="irs-bar" style="cursor: ew-resize; left: 3.66667%; width: 0%;"></span><span class="irs-bar-edge"></span><span class="irs-shadow shadow-single" style="display: none;"></span><span class="irs-slider single" style="left: 0%;"></span></span><input class="js-range-slider irs-hidden-input shiny-bound-input" id="startdate" data-min="1" data-max="3786" data-from="1" data-step="50" data-grid="true" data-grid-num="9.4625" data-grid-snap="false" data-keyboard="true" data-keyboard-step="1.32100396301189" data-drag-interval="true" data-data-type="number" data-prettify-separator="," readonly="">
+</div>
+<pre class="r"><code class="r"><span class="identifier">sliderInput</span><span class="paren">(</span><span class="string">"enddate"</span>, <span class="string">"End Date:"</span>, <span class="identifier">min</span> <span class="operator">=</span> <span class="number">1</span>, <span class="identifier">max</span> <span class="operator">=</span> <span class="identifier">length</span><span class="paren">(</span><span class="identifier">portfolio</span><span class="paren">)</span>, 
+            <span class="identifier">value</span> <span class="operator">=</span> <span class="identifier">length</span><span class="paren">(</span><span class="identifier">portfolio</span><span class="paren">)</span><span class="paren">)</span></code></pre>
+<div class="form-group shiny-input-container">
+<label class="control-label" for="enddate">End Date:</label>
+<span class="irs js-irs-1 irs-with-grid"><span class="irs"><span class="irs-line" tabindex="-1"><span class="irs-line-left"></span><span class="irs-line-mid"></span><span class="irs-line-right"></span></span><span class="irs-min" style="visibility: visible;">1</span><span class="irs-max" style="visibility: hidden;">3,786</span><span class="irs-from" style="visibility: hidden;">0</span><span class="irs-to" style="visibility: hidden;">0</span><span class="irs-single" style="left: 90.8333%;">3,786</span></span><span class="irs-grid" style="width: 92.6667%; left: 3.56667%;"><span class="irs-grid-pol" style="left: 0%"></span><span class="irs-grid-text js-grid-text-0" style="left: 0%; margin-left: -1.83333%;">1</span><span class="irs-grid-pol small" style="left: 7.045354469%"></span><span class="irs-grid-pol small" style="left: 3.522677235%"></span><span class="irs-grid-pol" style="left: 10.568031704%"></span><span class="irs-grid-text js-grid-text-1" style="left: 10.568%; visibility: visible; margin-left: -3.5%;">401</span><span class="irs-grid-pol small" style="left: 17.613386173%"></span><span class="irs-grid-pol small" style="left: 14.090708939%"></span><span class="irs-grid-pol" style="left: 21.136063408%"></span><span class="irs-grid-text js-grid-text-2" style="left: 21.1361%; visibility: visible; margin-left: -3.5%;">801</span><span class="irs-grid-pol small" style="left: 28.181417877%"></span><span class="irs-grid-pol small" style="left: 24.658740643%"></span><span class="irs-grid-pol" style="left: 31.704095112%"></span><span class="irs-grid-text js-grid-text-3" style="left: 31.7041%; visibility: visible; margin-left: -4.83333%;">1,201</span><span class="irs-grid-pol small" style="left: 38.749449581%"></span><span class="irs-grid-pol small" style="left: 35.226772347%"></span><span class="irs-grid-pol" style="left: 42.272126816%"></span><span class="irs-grid-text js-grid-text-4" style="left: 42.2721%; margin-left: -4.83333%;">1,601</span><span class="irs-grid-pol small" style="left: 49.317481285%"></span><span class="irs-grid-pol small" style="left: 45.794804051%"></span><span class="irs-grid-pol" style="left: 52.84015852%"></span><span class="irs-grid-text js-grid-text-5" style="left: 52.8402%; visibility: visible; margin-left: -4.66667%;">2,001</span><span class="irs-grid-pol small" style="left: 59.885512989%"></span><span class="irs-grid-pol small" style="left: 56.362835755%"></span><span class="irs-grid-pol" style="left: 63.408190224%"></span><span class="irs-grid-text js-grid-text-6" style="left: 63.4082%; visibility: visible; margin-left: -4.83333%;">2,401</span><span class="irs-grid-pol small" style="left: 70.453544693%"></span><span class="irs-grid-pol small" style="left: 66.930867459%"></span><span class="irs-grid-pol" style="left: 73.976221928%"></span><span class="irs-grid-text js-grid-text-7" style="left: 73.9762%; visibility: visible; margin-left: -4.66667%;">2,801</span><span class="irs-grid-pol small" style="left: 81.021576397%"></span><span class="irs-grid-pol small" style="left: 77.498899163%"></span><span class="irs-grid-pol" style="left: 84.544253632%"></span><span class="irs-grid-text js-grid-text-8" style="left: 84.5443%; margin-left: -4.66667%;">3,201</span><span class="irs-grid-pol small" style="left: 91.589608101%"></span><span class="irs-grid-pol small" style="left: 88.066930867%"></span><span class="irs-grid-pol" style="left: 95.112285336%"></span><span class="irs-grid-text js-grid-text-9" style="left: 95.1123%; visibility: visible; margin-left: -4.83333%;">3,601</span><span class="irs-grid-pol" style="left: 100%"></span><span class="irs-grid-text js-grid-text-10" style="left: 100%; visibility: visible; margin-left: -4.66667%;">3,786</span></span><span class="irs-bar" style="cursor: ew-resize; left: 3.66667%; width: 92.6667%;"></span><span class="irs-bar-edge"></span><span class="irs-shadow shadow-single" style="display: none;"></span><span class="irs-slider single" style="left: 92.6667%;"></span></span><input class="js-range-slider irs-hidden-input shiny-bound-input" id="enddate" data-min="1" data-max="3786" data-from="3786" data-step="50" data-grid="true" data-grid-num="9.4625" data-grid-snap="false" data-keyboard="true" data-keyboard-step="1.32100396301189" data-drag-interval="true" data-data-type="number" data-prettify-separator="," readonly="">
+</div>
+<pre class="r"><code class="r"><span class="identifier">renderPlot</span><span class="paren">(</span><span class="paren">{</span>
+  <span class="identifier">pnl_plot</span><span class="paren">(</span><span class="identifier">portfolio</span><span class="paren">[</span><span class="identifier">input</span><span class="operator">$</span><span class="identifier">startdate</span><span class="operator">:</span><span class="identifier">input</span><span class="operator">$</span><span class="identifier">enddate</span><span class="paren">]</span><span class="paren">)</span>
+<span class="paren">}</span><span class="paren">)</span></code></pre>
+<div id="oute667447ac3226a65" class="shiny-plot-output shiny-bound-output" style="width: 100% ; height: 400px"></div>
+<p><br></p>
+<hr>
+<hr>
+</div>
+<div id="section-endless-explorations-optional-homework" class="section level3">
+<h3>Endless explorations (optional homework)</h3>
+<p>This is a <a href="http://poseidon01.ssrn.com/delivery.php?ID=851091091009083082092113118102076099034023058067019062072066007100008111081022102123034016097101060099003106125099002090116089026058012038004030005113111105079028059062024121067073126072090091089069014121102110107075029090001011087028011082124103085&amp;EXT=pdf">recent research article</a> that won an award in 2016. Can you implement a simple strategy as in Figure 1 of this paper? You may find these R commands useful: <code>names</code>, <code>which</code>, <code>str_sub</code>,<code>diff</code>,<code>as.vector</code>, <code>length</code>, <code>pmin</code>, <code>pmax</code>, <code>sapply</code>, <code>lapply</code>,<code>Reduce</code>,<code>unique</code>, <code>as.numeric</code>, <code>%in%</code> <img src="./ExerciseSet1.Rmd_files/simpletrade.png" alt="A Simple Trading Startegy"></p>
+<p>What if you also include information about bonds? (e.g.&nbsp;download the returns of the the ETF with ticker “TLT”) Is there any relation between stocks and bonds?</p>
+<p><strong>Have fun</strong></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "mathjax-local/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+</div>
+  </div>
+
+
+
+</body></html>
