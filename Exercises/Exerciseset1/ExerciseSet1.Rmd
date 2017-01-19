@@ -264,6 +264,7 @@ This is a [recent research article](http://poseidon01.ssrn.com/delivery.php?ID=8
 What if you also include information about bonds? (e.g. download the returns of the the ETF with ticker "TLT") Is there any relation between stocks and bonds? 
 
 
+
 **Have fun** 
 
 
