@@ -221,6 +221,7 @@ myData + StockReturns[1:40,])
 ```
 
 *Error, because we add a non-numeric argument to binary operator*
+Mydata consists of 20 row but we add a matrix with 40 rows
 
 **Your Answers here:**
 <br>
